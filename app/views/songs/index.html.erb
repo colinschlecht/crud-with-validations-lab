@@ -1,0 +1,23 @@
+
+<h1> Songs </h1>
+<br>
+<table>
+<thead>
+<tr>
+<th>Song<th>
+</tr>
+</thead>
+<tbody>
+<% @songs.each do |s| %>
+   <tr><td><%= link_to s.title, song_path(s) %> </td></tr>
+<% end %>
+</tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<%= link_to "New Song", new_song_path %>
